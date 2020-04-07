@@ -27,4 +27,8 @@ jobs:
       - uses: borales/actions-yarn@v2.0.0
         with:
           cmd: build
-      # deploy code
+      - uses: akhileshns/heroku-deploy@master # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_TOKEN}}
+          heroku_app_name: "flodgfggs"
+          heroku_email: "workerselves@gmail.com"
